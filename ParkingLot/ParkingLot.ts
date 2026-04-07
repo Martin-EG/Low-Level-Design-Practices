@@ -127,6 +127,10 @@ class ParkingLot {
   }
 
   parkVehicle(vehicle: Vehicle): boolean {
+    if(this.findParkedVehicle(vehicle)) {
+      throw new Error('Vehicle is already parked in the lot.');
+    }
+
     for(const floor of this.floors) {
       const availableParkingSpotOnFloor = floor.findAvailableParkingSpotForVehicle(vehicle);
 
