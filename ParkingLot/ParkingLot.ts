@@ -6,9 +6,9 @@ enum VehicleType {
 }
 
 enum ParkingSpotSize {
-  SMALL,
-  MEDIUM,
-  LARGE,
+  SMALL = 1,
+  MEDIUM = 2,
+  LARGE = 3,
 }
 
 class Vehicle {
